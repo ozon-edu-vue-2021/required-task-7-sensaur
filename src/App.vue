@@ -1,4 +1,5 @@
 <template>
+
   <v-app light>
     <v-toolbar app color="blue-grey darken-3" class="white--text">
       <v-toolbar-title class="headline text-uppercase">
@@ -21,6 +22,7 @@
 <!--      </v-tooltip>-->
     </v-toolbar>
     <v-content>
+      <Friendcard />
       <FriendList v-bind:friends="friends"/>
     </v-content>
     <v-snackbar
@@ -40,10 +42,12 @@
 <script>
 import FriendList from "./components/FriendList";
 import data from './assets/data'
+import Friendcard from "./components/Friendcard";
 
 export default {
   name: "App",
   components: {
+    Friendcard,
     FriendList
   },
 
