@@ -13,7 +13,6 @@
   "main": "index.js",
   "dependencies": {
     "core-js": "^3.6.5",
-    "axios": "^0.18.0",
     "material-design-icons-iconfont": "^3.0.3",
     "roboto-fontface": "*",
     "vue": "^2.6.11",

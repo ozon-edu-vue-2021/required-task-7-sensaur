@@ -39,7 +39,6 @@
 
 <script>
 import FriendList from "./components/FriendList";
-import axios from "axios";
 import data from './assets/data'
 
 export default {
@@ -66,24 +65,7 @@ export default {
   },
 
   methods: {
-    async meetSomeone(gender) {
-      try {
-        const { data } = await axios({
-          method: "GET",
-          url: `http://localhost:1331/friend/${gender}`,
-          headers: {
-            Authorization:
-                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2UiOiJkZW1vIiwiaWF0IjoxNTQ0MTMzNjc2fQ.bMZTSEdftqNjzlkRBDF9fuFJWPd5tv3x84ATVPxjVuE"
-          }
-        });
-        this.friends.push(data.friend);
-        window.localStorage.setItem("friends", JSON.stringify(this.friends));
-      } catch (error) {
-        this.toast = "red";
-        this.text = `An error has ocurred: ${error.message}`;
-        this.snackbar = true;
-      }
-    }
+
   },
 
   watch: {
