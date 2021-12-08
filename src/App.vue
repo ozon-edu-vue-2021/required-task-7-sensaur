@@ -2,24 +2,23 @@
   <v-app light>
     <v-toolbar app color="blue-grey darken-3" class="white--text">
       <v-toolbar-title class="headline text-uppercase">
-        <span class="font-weight-light">My</span>
         <span>Friends</span>
         <span class="font-weight-light">List</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-tooltip left>
-        <v-btn @click="meetSomeone('male')" slot="activator" icon class="white--text">
-          <v-icon>fa-mars</v-icon>
-        </v-btn>
-        <span>Introduce me to a new Dude!</span>
-      </v-tooltip>
+<!--      <v-tooltip left>-->
+<!--        <v-btn @click="meetSomeone('male')" slot="activator" icon class="white&#45;&#45;text">-->
+<!--          <v-icon>fa-mars</v-icon>-->
+<!--        </v-btn>-->
+<!--        <span>Introduce me to a new Dude!</span>-->
+<!--      </v-tooltip>-->
 
-      <v-tooltip left>
-        <v-btn @click="meetSomeone('female')" slot="activator" icon class="white--text">
-          <v-icon>fa-venus</v-icon>
-        </v-btn>
-        <span>Introduce me to a new Lady!!</span>
-      </v-tooltip>
+<!--      <v-tooltip left>-->
+<!--        <v-btn @click="meetSomeone('female')" slot="activator" icon class="white&#45;&#45;text">-->
+<!--          <v-icon>fa-venus</v-icon>-->
+<!--        </v-btn>-->
+<!--        <span>Introduce me to a new Lady!!</span>-->
+<!--      </v-tooltip>-->
     </v-toolbar>
     <v-content>
       <FriendList v-bind:friends="friends"/>
@@ -41,6 +40,7 @@
 <script>
 import FriendList from "./components/FriendList";
 import axios from "axios";
+import data from './assets/data'
 
 export default {
   name: "App",
@@ -62,7 +62,7 @@ export default {
   },
 
   mounted() {
-    this.friends = JSON.parse(window.localStorage.getItem("friends")) || [];
+    this.friends = data
   },
 
   methods: {

@@ -2,13 +2,12 @@
   <div>
     <v-list-tile avatar>
       <v-list-tile-avatar>
-        <img :src="friend.picture.thumbnail">
+        <v-icon>fa-user</v-icon>
       </v-list-tile-avatar>
       <v-list-tile-content>
         <v-list-tile-title>
-          <div>{{friend.name.first}} {{friend.name.last}}</div>
+          <div>{{friend.name}}</div>
         </v-list-tile-title>
-        <v-list-tile-sub-title v-html="friend.email"></v-list-tile-sub-title>
       </v-list-tile-content>
       <v-list-tile-action>
         <slot></slot>
