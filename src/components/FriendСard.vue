@@ -26,10 +26,6 @@
 
 <script>
 export default {
-  name: "FriendСard"
 }
 </script>
 
-<style scoped>
-
-</style>
