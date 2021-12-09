@@ -7,22 +7,9 @@
         <span class="font-weight-light">List</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-<!--      <v-tooltip left>-->
-<!--        <v-btn @click="meetSomeone('male')" slot="activator" icon class="white&#45;&#45;text">-->
-<!--          <v-icon>fa-mars</v-icon>-->
-<!--        </v-btn>-->
-<!--        <span>Introduce me to a new Dude!</span>-->
-<!--      </v-tooltip>-->
-
-<!--      <v-tooltip left>-->
-<!--        <v-btn @click="meetSomeone('female')" slot="activator" icon class="white&#45;&#45;text">-->
-<!--          <v-icon>fa-venus</v-icon>-->
-<!--        </v-btn>-->
-<!--        <span>Introduce me to a new Lady!!</span>-->
-<!--      </v-tooltip>-->
     </v-toolbar>
     <v-content>
-      <Friendcard />
+      <FriendСard />
       <FriendList v-bind:friends="friends"/>
     </v-content>
     <v-snackbar
@@ -42,12 +29,12 @@
 <script>
 import FriendList from "./components/FriendList";
 import data from './assets/data'
-import Friendcard from "./components/Friendcard";
+import FriendСard from "./components/FriendСard";
 
 export default {
   name: "App",
   components: {
-    Friendcard,
+    FriendСard,
     FriendList
   },
 
