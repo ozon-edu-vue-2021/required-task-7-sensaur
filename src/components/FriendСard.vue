@@ -13,7 +13,7 @@
         <slot></slot>
       </v-list-tile-action>
     </v-list-tile>
-    <v-divider v-if="!last"></v-divider>
+    <v-divider></v-divider>
     <v-list-tile-content>
       <v-list-tile-title>
         <div>Друзья</div>
@@ -25,7 +25,9 @@
 </template>
 
 <script>
+// import Friend from "./Friend";
 export default {
+  // components: {Friend}
 }
 </script>
 
