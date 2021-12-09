@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-list-tile avatar>
+    <v-list-tile avatar router-link to="/friendcard">
       <v-list-tile-avatar>
         <v-icon>fa-user</v-icon>
       </v-list-tile-avatar>

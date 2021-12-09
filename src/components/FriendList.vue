@@ -4,7 +4,7 @@
       <v-flex mb-4>
         <v-card>
           <v-list v-if="friends.length > 0" two-line>
-            <template v-for="(friend, index) in friends">
+            <template v-for="(friend, index) in friends" >
               <Friend :key="index" :friend="friend" :last="index === friends.length -1">
                 <v-btn @click="removeFriend(index)" icon>
                   <v-icon>delete</v-icon>
